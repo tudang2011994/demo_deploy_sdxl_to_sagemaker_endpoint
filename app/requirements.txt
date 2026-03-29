@@ -1,0 +1,6 @@
+#Core AI Engine
+
+torch
+diffusers
+transformers
+accelerate
