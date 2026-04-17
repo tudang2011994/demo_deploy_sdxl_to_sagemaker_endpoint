@@ -8,13 +8,13 @@ import base64, io
 #Init Pipe
 def model_fn(model_dir):
     pipe = StableDiffusionXLInpaintPipeline.from_pretrained(
-        "", torch_dtype = torch.float16, variant ='fp16', use_safetensors= True
+        model_dir, torch_dtype = torch.float16, variant ='fp16', use_safetensors= True
     ).to('cuda')
 
     return pipe
 
 
-def predict_fn(input_data,input_mask, pipe):
+def predict_fn(input_data, pipe):
     #Get request data
     prompt = input_data.get('prompt')
     img_b64 = input_data.get('image')
