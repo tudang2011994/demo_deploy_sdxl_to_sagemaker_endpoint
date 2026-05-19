@@ -1,5 +1,5 @@
 #FROM pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
-FROM 763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-inference:2.1.0-gpu-py310
+FROM 763104351884.dkr.ecr.us-west-1.amazonaws.com/pytorch-inference:2.1.0-gpu-py310
 
 # Install dependency
 COPY app/requirements.txt .

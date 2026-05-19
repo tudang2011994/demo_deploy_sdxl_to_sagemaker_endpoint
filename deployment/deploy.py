@@ -7,8 +7,7 @@ sess = sagemaker.Session()
 
 # Get Role
 role = "arn:aws:iam::152982431111:role/service-role/AmazonSageMaker-ExecutionRole-20260314T005535"
-image_uri = "152982431111.dkr.ecr.us-west-2.amazonaws.com/sdxl"
-#model_data = "https://s3-nail-vr.s3.us-west-1.amazonaws.com/model/sdxl.tar.gz"
+image_uri = "152982431111.dkr.ecr.us-west-1.amazonaws.com/sdxl"
 model_data = "s3://s3-nail-vr/model/sdxl.tar.gz" 
 
 # Create model
