@@ -10,7 +10,7 @@ phases:
       - echo Building application...
       - docker build -t sdxl .
       - docker tag sdxl:latest 152982431111.dkr.ecr.us-west-1.amazonaws.com/sdxl:latest
-  postbuild:
+  post_build:
     commands:
       - echo Build completed
       - echo Pushing into ECR...
