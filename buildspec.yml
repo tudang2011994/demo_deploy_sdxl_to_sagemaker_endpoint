@@ -7,8 +7,11 @@ phases:
         docker login --username AWS --password-stdin 152982431111.dkr.ecr.us-west-1.amazonaws.com
   build:
     commands:
+      - echo Building application...
       - docker build -t sdxl .
       - docker tag sdxl:latest 152982431111.dkr.ecr.us-west-1.amazonaws.com/sdxl:latest
   postbuild:
     commands:
+      - echo Build completed
+      - echo Pushing into ECR...
       - docker push 152982431111.dkr.ecr.us-west-1.amazonaws.com/sdxl:latest
